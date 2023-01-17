@@ -1,0 +1,18 @@
+.centered
+{
+    text-align: center;
+}
+.btn {
+    border: none;
+    background-color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+}
+.indent {
+    text-indent: 40px;
+}
+
+.bg {
+    background-color: #dce6e6
+}

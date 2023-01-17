@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class = "container-fluid">
+    <form action = "/reply" method="post">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="content" name="content" placeholder="Click to Type" type="text">
+        </div>
+        <div class = "text-center">
+            <button class="btn btn-primary" type="submit">Reply</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

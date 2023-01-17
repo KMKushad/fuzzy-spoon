@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+<div class = "container-fluid">
+    <div class = "text-start">
+        <a href = "/">Back To Homepage</a>
+    </div>
+
+    <div class = "text-center">
+        <form action = "/compose" method = "post">
+            <input type = "submit" value = "Post"> <br>
+        </form>
+    </div>
+
+    <div class = "ms-2">
+        {% for post in posts %}
+            <form action = "/viewpost", method = "post" class = "w-100">
+                <div class = "pull-left text-start width-100 d-grid gap-2">
+                    <input type = "submit" name = "{{ post['id'] }}" class = "btn btn-block text-start" value = "{{ post['title'][0]['title'] }}   |   Written by {{ post['username'] }} at {{ post['time'] }} EST   |   {{ post['replies'] }} replies">
+                </div>
+            </form>
+
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
